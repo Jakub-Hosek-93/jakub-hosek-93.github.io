@@ -1,0 +1,255 @@
+/* Reset */
+body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Základní vzhled */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 120px;
+    animation: fadeInBody 1s ease-in;
+}
+
+/* Top bar – glassmorphism look */
+.topbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%; /* 3/4 šířky stránky */
+    height: 45px; /* menší výška */
+    padding: 0 10px 0 0;
+    background: rgba(30, 30, 30, 0.35);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+    overflow: hidden;
+}
+
+
+/* Logo vlevo v topbaru */
+.topbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #bb86fc;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.logo-img {
+    height: 28px;
+    max-height: 100%;
+    margin-right: 10px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+/* Navigace vpravo */
+.topbar .nav-links {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.topbar .nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.topbar .nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* Nadpis s psacím strojem */
+.name-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typingName 3s steps(25) forwards;
+    animation-delay: 0s;
+}
+
+/* Podtitulek – psací stroj */
+.subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typingSubtitle 3s steps(30) forwards;
+    animation-delay: 3.2s;
+}
+
+/* Kurzor */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: #bb86fc;
+    animation: blinkCursor 0.8s steps(2) infinite;
+    margin-left: 2px;
+}
+
+/* Klíčové animace */
+@keyframes typingName {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes typingSubtitle {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Podnadpisy H2 */
+h2 {
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    margin: 25px 0 10px;
+    padding-left: 12px;
+    border-left: 5px solid #4aa3ff;
+    background: linear-gradient(to right, rgba(74,163,255,0.15), transparent);
+    border-radius: 4px;
+}
+
+/* Podnadpisy H3 */
+h3 {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 3px solid #888;
+    background: linear-gradient(to right, rgba(136,136,136,0.12), transparent);
+    border-radius: 3px;
+}
+
+/* Seznamy */
+ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* Odkazy */
+a {
+    color: #82b1ff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Skupiny ikon */
+.icon-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+/* Ikony s popiskem */
+.icon-with-label {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-with-label:hover {
+    transform: translateY(-8px) scale(1.1);
+}
+
+.icon-with-label::after {
+    content: attr(data-label);
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icon-with-label:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    color: #aaa;
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll offset kvůli topbaru */
+h2, h3, section {
+    scroll-margin-top: 120px;
+}
