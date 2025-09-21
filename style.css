@@ -253,3 +253,122 @@ html {
 h2, h3, section {
     scroll-margin-top: 120px;
 }
+
+/* === PLAYVERSE SEKCÍ === */
+#playverse {
+    padding: 0.8rem 2rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    min-height: 40vh;
+}
+
+#playverse .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+#playverse .left {
+    flex: 1;
+    color: #e0e0e0; /* stejné jako zbytek textu */
+}
+
+#playverse .left h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#playverse .left p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #bbb;
+}
+
+#playverse .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(74, 163, 255, 0.6), rgba(187, 134, 252, 0.6));
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#playverse .btn:hover {
+    background-color: #1abc9c;
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4);
+}
+
+
+/* PRAVÁ STRANA */
+#playverse .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-card {
+    width: 400px;
+    height: 250px;
+    border-radius: 24px;
+    background: rgba(40, 40, 40, 0.6); /* tmavší glassmorphism */
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(187, 134, 252, 0.25); /* fialový nádech */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(74, 163, 255, 0.4);
+}
+
+.glass-card p {
+    font-size: 4rem;
+}
+
+/* Úvodní sekce (pozdrav vysoko) */
+#hero {
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #121212;
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+#hero .hero-inner {
+    max-width: 800px;
+    width: 100%;
+}
+
+#hero .name-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero .subtitle {
+    font-size: 1.4rem;
+    margin-top: 0;
+}
