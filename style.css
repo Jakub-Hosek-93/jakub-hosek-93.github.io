@@ -40,7 +40,6 @@ body {
     overflow: hidden;
 }
 
-
 /* Logo vlevo v topbaru */
 .topbar .logo {
     display: flex;
@@ -205,6 +204,8 @@ a:hover {
 
 /* Ikony s popiskem */
 .icon-with-label {
+    width: 64px;
+    height: 64px;
     position: relative;
     display: inline-flex;
     flex-direction: column;
@@ -222,8 +223,13 @@ a:hover {
     content: attr(data-label);
     font-size: 0.9rem;
     color: #aaa;
+    text-align: center;
     margin-top: 6px;
     opacity: 0;
+    background-color: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    padding: 6px;
+    border-radius: 6px;
     transform: translateY(5px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -276,7 +282,7 @@ h2, h3, section {
 
 #playverse .left {
     flex: 1;
-    color: #e0e0e0; /* stejné jako zbytek textu */
+    color: #e0e0e0;
 }
 
 #playverse .left h1 {
@@ -313,7 +319,6 @@ h2, h3, section {
     box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4);
 }
 
-
 /* PRAVÁ STRANA */
 #playverse .right {
     flex: 1;
@@ -326,10 +331,10 @@ h2, h3, section {
     width: 400px;
     height: 250px;
     border-radius: 24px;
-    background: rgba(40, 40, 40, 0.6); /* tmavší glassmorphism */
+    background: rgba(40, 40, 40, 0.6);
     backdrop-filter: blur(16px) saturate(150%);
     -webkit-backdrop-filter: blur(16px) saturate(150%);
-    border: 1px solid rgba(187, 134, 252, 0.25); /* fialový nádech */
+    border: 1px solid rgba(187, 134, 252, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -371,4 +376,92 @@ h2, h3, section {
 #hero .subtitle {
     font-size: 1.4rem;
     margin-top: 0;
+}
+
+/* === SEKCÍ PROJEKTY === */
+#projekty {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #121212;
+}
+
+#projekty h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Karty projektů */
+.project-card {
+    display: inline-block;
+    flex: 1;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 20px;
+    background: rgba(40, 40, 40, 0.5);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(187, 134, 252, 0.25);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(74,163,255,0.4);
+}
+
+.project-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+}
+
+/* Tlačítko */
+.project-card .btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(74,163,255,0.6), rgba(187,134,252,0.6));
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.project-card .btn:hover {
+    background: #1abc9c;
+    box-shadow: 0 6px 20px rgba(26,188,156,0.4);
+}
+
+.project-card .technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
