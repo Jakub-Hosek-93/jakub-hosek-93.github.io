@@ -465,3 +465,13 @@ h2, h3, section {
     flex-wrap: wrap;
     gap: 1.5rem;
 }
+
+.playverse-highlight h1 {
+    background: linear-gradient(90deg, #4aa3ff, #bb86fc);
+    color: transparent;
+    background-clip: text;
+    font-size: 100px;
+    font-weight: 4000;
+    text-align: center;
+}
+

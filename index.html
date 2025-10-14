@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Jakub Hošek</title>
+
+    <!--NEMAM RAD META -->
+    <meta name="keywords" content="Jakub Hošek, portfolio, programátor, IT student, webové aplikace, PlayVerse, JavaScript, HTML, CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Osobní webové portfolio Jakuba Hoška, studenta aplikované kybernetiky a programátora.">
+    <meta name="author" content="Jakub Hošek">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/PNGs/favicon.ico">
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     <script src="script.js" defer></script>
 </head>
@@ -38,22 +46,44 @@
 <main>
     <h2 id="about">About Me</h2>
     <p>
-        Ahoj! Jsem student 2. ročníku <a href="https://kyberna.cz/" target="_blank">Střední školy aplikované kybernetiky</a> v Hradci Králové se zaměřením na programování.
-        V současnosti se věnuji jazyku C#, ve kterém už mám pevné základy a dokážu vytvářet menší aplikace na úrovni lepšího začátečníka.
+        Ahoj!
+        Jsem student 2. ročníku <a href="https://kyberna.cz/">školy aplikované kybernetiky</a> v Hradci Králové se zaměřením na programování.
+        Aktuálně se věnuji jazyku <strong>C#</strong>, ve kterém mám pevné základy a dokážu vytvářet menší aplikace na úrovni pokročilého začátečníka.
     </p>
     <p>
         Mám rád výzvy a beru je jako příležitost k dalšímu zlepšování.
-        Od září se chci více zaměřit na webové technologie – HTML, CSS a JavaScript – a postupně v nich získávat zkušenosti. Proto i vznikl tento web.
+        Od září se chci více zaměřit na <strong>webové technologie – HTML, CSS a JavaScript</strong> – a postupně v nich získávat další zkušenosti.
+        Plánuji se také začít učit <strong>Next.js</strong>, moderní framework pro tvorbu webových aplikací.
+    </p>
+    <p>
+        Kromě školy pomáhám v <strong>soukromé ordinaci praktického lékaře</strong>, kde spravuji web, tabulky, databáze a starám se o technickou stránku provozu.
     </p>
     <p>
         Baví mě objevovat nové technologie, hledat řešení problémů a zkoušet je v praxi na vlastních projektech.
-        Do budoucna bych rád získal praxi v programování a podílel se na projektech, které mají reálné využití.
+        Do budoucna bych rád získal <strong>praxi v programování</strong> a podílel se na projektech, které mají <strong>reálné využití</strong>.
     </p>
 
     <!-- Projekty -->
     <h2 id="projects">Projekty</h2>
     <section id="projekty">
         <div class="projects-container">
+             <!-- Ordinace karta -->
+            <div class="project-card">
+                <h4>Web pro lékařskou ordinaci</h4>
+                <div class="technologies">
+                    <iconify-icon icon="devicon-plain:webstorm" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
+                    <iconify-icon icon="devicon-plain:vscode" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
+                    <iconify-icon icon="iconoir:git-solid" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
+                    <iconify-icon icon="flowbite:html-solid" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
+                    <iconify-icon icon="flowbite:css-solid" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
+                </div>
+                <p>Vytvořil jsem moderní web pro soukromou lékařskou ordinaci,
+                    zaměřený na přehledné informace o službách, lékařích a snadný kontakt pro pacienty.</p>
+
+                <!-- TODO: přidat doménu -->
+                <a href="#" class="btn">Zjistit více</a>
+            </div>
+
             <!-- PlayVerse karta -->
             <div class="project-card">
                 <h4>PlayVerse</h4>
@@ -65,17 +95,8 @@
                     <iconify-icon icon="ph:microsoft-powerpoint-logo-fill" width="32" height="32"  style="color: #b3cfff"></iconify-icon>
                 </div>
                 <p>Vyhledávej hry, spravuj knihovnu s odehraným časem a wishlist s cenami.</p>
+                <br> <br>
                 <a href="PlayVerse.html" class="btn">Zjistit více</a>
-            </div>
-
-            <!-- InvestSim karta -->
-            <div class="project-card">
-                <h4>InvestSim</h4>
-                <div class="technologies">
-                    SOON
-                </div>
-                <p>Simulátor investic, kde můžeš zkoušet obchodování na burze bez rizika.</p>
-                <a href="InvestSim.html" class="btn">Zjistit více</a>
             </div>
         </div>
     </section>
