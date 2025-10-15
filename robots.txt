@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jakub-hosek-93.github.io/sitemap.xml
